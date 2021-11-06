@@ -59,8 +59,8 @@ public class FindProductPriceTest {
     public void find_existing_product_for_day_14_and_21_hs() {
         final LocalDateTime applicationDate = LocalDateTime.of(LocalDate.of(2020, 6, 14), LocalTime.of(21, 0, 0));
 
-        final PriceTO expectedPrice = ProductPriceHelper.getPrice3();
-        final List<PriceTO> expectedPrices = newArrayList(expectedPrice, ProductPriceHelper.getPrice4());
+        final PriceTO expectedPrice = ProductPriceHelper.getPrice1();
+        final List<PriceTO> expectedPrices = newArrayList(expectedPrice);
         when(repository.findProductPrice(eq(applicationDate), eq(PRODUCT_ID), eq(BRAND_ID))).thenReturn(expectedPrices);
 
         then_price_is_equals_than_expected(applicationDate, expectedPrice);
