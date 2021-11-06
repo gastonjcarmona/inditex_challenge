@@ -1,10 +1,12 @@
 package com.inditex.challenge.infrastructure.adapter.outbound.persistance.entity;
 
+import com.inditex.challenge.app.domain.model.Currency;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -33,9 +35,10 @@ public class Price extends BaseEntity {
     private Integer priority;
 
     @Column(name = "price", nullable = false)
-    private Double price;
+    private BigDecimal price;
 
     @Column(name = "currency", nullable = false)
-    private String currency;
+    @Enumerated(EnumType.STRING)
+    private Currency currency;
 
 }
