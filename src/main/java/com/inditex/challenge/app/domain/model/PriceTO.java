@@ -1,5 +1,6 @@
 package com.inditex.challenge.app.domain.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -7,6 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Getter
+@AllArgsConstructor
 @Builder
 public class PriceTO {
     private Long brandId;

@@ -3,6 +3,7 @@ package com.inditex.challenge.infrastructure.adapter.outbound.persistance.entity
 import com.inditex.challenge.app.domain.model.Currency;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "prices")
