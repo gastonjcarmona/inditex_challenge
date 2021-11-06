@@ -1,4 +1,4 @@
-package com.inditex.challenge.app.usecase;
+package com.inditex.challenge;
 
 import com.inditex.challenge.app.domain.model.PriceTO;
 

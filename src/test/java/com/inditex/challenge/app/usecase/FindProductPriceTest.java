@@ -1,5 +1,6 @@
 package com.inditex.challenge.app.usecase;
 
+import com.inditex.challenge.ProductPriceHelper;
 import com.inditex.challenge.app.domain.exception.ProductPriceNotFoundException;
 import com.inditex.challenge.app.domain.model.PriceTO;
 import com.inditex.challenge.app.ports.inbound.FindProductPrice;

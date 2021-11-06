@@ -5,11 +5,13 @@ import com.inditex.challenge.app.ports.outbound.ProductPriceRepository;
 import com.inditex.challenge.infrastructure.adapter.outbound.persistance.entity.Price;
 import com.inditex.challenge.infrastructure.adapter.outbound.persistance.repository.JpaProductPriceRepository;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Transactional
 public class ProductPriceStore extends Store<Price> implements ProductPriceRepository {
 
     private final JpaProductPriceRepository jpaProductPriceRepository;
