@@ -102,6 +102,21 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-HELP.md
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# End of https://www.toptal.com/developers/gitignore/api/maven,java,macos,windows
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
