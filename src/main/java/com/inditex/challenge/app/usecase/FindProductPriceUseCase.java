@@ -20,7 +20,7 @@ public class FindProductPriceUseCase implements FindProductPrice {
 
     @Override
     public PriceTO findProductPrice(final LocalDateTime applicationDate, final Long productId, final Long brandId) {
-        log.info("Trying to get price from data base");
+        log.info("Trying to get price from data base for product '{}', brand '{}' and date '{}'", productId, brandId, applicationDate);
         return repository.findProductPrice(applicationDate, productId, brandId)
                 .stream()
                 .max(Comparator.comparing(PriceTO::getPriority))
