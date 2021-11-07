@@ -33,19 +33,22 @@ public class ProductPriceStore extends Store<Price> implements ProductPriceRepos
         return jpaProductPriceRepository.findAll(specification)
                 .stream()
                 .map(p -> {
-                            final PriceTO price = new PriceTO(
-                                    p.getBrandId(),
-                                    p.getStartDate(),
-                                    p.getEndDate(),
-                                    p.getPriceList(),
-                                    p.getProductId(),
-                                    p.getPriority(),
-                                    p.getPrice(),
-                                    p.getCurrency());
-                            log.info("Price selected '{}'", price);
-                            return price;
-                        }
-                )
+                    final PriceTO price = convertEntityToDTO(p);
+                    log.info("Price selected '{}'", price);
+                    return price;
+                })
                 .collect(Collectors.toList());
+    }
+
+    private PriceTO convertEntityToDTO(final Price price) {
+        return new PriceTO(
+                price.getBrandId(),
+                price.getStartDate(),
+                price.getEndDate(),
+                price.getPriceList(),
+                price.getProductId(),
+                price.getPriority(),
+                price.getPrice(),
+                price.getCurrency());
     }
 }
