@@ -14,6 +14,7 @@ Devuelva como datos de salida: identificador de producto, identificador de caden
 - [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html)
 - [Data Base in Memory: H2](https://www.h2database.com/html/main.html)
 - [JUnit](https://junit.org/junit5/docs/current/user-guide/)
+- [Lombok Plugin](https://projectlombok.org/) 
 
 ## Running app locally
 ```bash
