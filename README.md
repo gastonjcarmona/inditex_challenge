@@ -21,6 +21,11 @@ Devuelva como datos de salida: identificador de producto, identificador de caden
 mvn clean compile package spring-boot:run
 ```
 
+## Running tests locally
+```bash
+mvn clean test
+```
+
 ## Verifying Healthy and Information endpoints
 ```
 http://localhost:8080/actuator/health
