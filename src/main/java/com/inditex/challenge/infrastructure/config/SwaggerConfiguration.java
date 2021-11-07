@@ -20,6 +20,5 @@ public class SwaggerConfiguration {
                 .apis(RequestHandlerSelectors.basePackage("com.inditex.challenge.infrastructure"))
                 .paths(PathSelectors.any())
                 .build();
-                //.securitySchemes(singletonList(new BasicAuth("basicAuth")));
     }
 }
