@@ -105,7 +105,7 @@ Response
 
 - Test 4: petición a las 10:00 del día 15 del producto 35455 para la brand 1 (ZARA)
 ```
-curl -X GET "http://localhost:8080/api/v1/prices/brands/1/products/35455?applicationDate=2020-06-14T21%3A00%3A00" -H "accept: */*"
+curl -X GET "http://localhost:8080/api/v1/prices/brands/1/products/35455?applicationDate=2020-06-15T10%3A00%3A00" -H "accept: */*"
 ```
 Response
 ```json
